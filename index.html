@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <style>
+    /* Page background */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Main container */
+    div {
+        background: #ffffff;
+        width: 360px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Title */
+    h1 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    /* Instruction text */
+    .ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* Input */
+    #input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    #input:focus {
+        border-color: #667eea;
+    }
+
+    /* Add button */
+    #btn {
+        width: 100%;
+        padding: 10px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    #btn:hover {
+        background: #5a67d8;
+    }
+
+    /* List item */
+    .list-item {
+        position: relative;
+        background: #f7f7f7;
+        margin-top: 10px;
+        padding: 10px 80px 10px 40px; /* space for checkbox & delete */
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Checkbox (LEFT) */
+    .list-item input[type="checkbox"] {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Delete button (RIGHT) */
+    .delete-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #e53e3e;
+        color: white;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .delete-btn:hover {
+        background: #c53030;
+    }
+
+    /* Completed state */
+    .completed {
+        text-decoration: line-through;
+        color: #999;
+    }
+    
+    
+    .counts {
+        display: flex;
+        justify-content: space-between; /* left + right */
+        align-items: center;
+        padding: 0;
+        margin: 10px 0;
+        list-style: none;
+    }
+
+    .items,
+    .complete {
+        font-weight: 500;
+    }
+
+
+    </style> 
+
+</head>
+<body>
+    <!--
+    <h1>Hello JavaScript</h1>
+
+    <button onclick="console.log('Hello World')">Click Me</button>
+    <button id="btn">Click Me</button>
+    <button onclick="alertFunction()">Click me baby</button> 
+
+    <div id="container">
+        <button id="btn">Click Me</button>
+    </div>
+        
+    <button id="btn1">Click Me!</button>
+
+    <a href="https://www.javascripttutorial.net/">JS Turorial</a> -->
+    <!--
+    <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+    
+    </section>-->
+
+    <!--
+    <p id="para">Colors</p>
+    <button>blue</button>
+    <button>red</button> -->
+    
+    <div>
+        <h1>ToDo List</h1>
+
+        <ul class="ul">
+            <li>Enter a To do list:</li>
+        </ul>
+        
+        <input type="text" id="input">
+
+        <button id="btn">Add List</button>
+        
+        <ul class="counts">
+            <li class="items">Total items: <span id="count">0</span></li>
+            <li class="complete">Total completed: <span id="count2">0</span></li>
+        </ul>
+
+    </div>
+
+    <script src="Script.js"></script>
+    </body>
+</html>
